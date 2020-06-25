@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.Place_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:id="@+id/line_menu_place"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#f4061c"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="3"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_place_huy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#f4061c"
+                android:gravity="center_horizontal"
+                android:paddingTop="15dp"
+                android:text="Hủy"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#f4061c"
+                android:gravity="center_horizontal"
+                android:paddingTop="15dp"
+                android:text="Chọn tỉnh thành"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                app:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/txt_finish_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#f4061c"
+                android:gravity="center_horizontal"
+                android:paddingTop="15dp"
+                android:text="Xong"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/line_search_place"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <EditText
+                android:id="@+id/edit_search_place"
+                android:padding="5dp"
+                android:layout_width="380dp"
+                android:layout_height="40dp"
+                android:background="@drawable/place_search"
+                android:drawableLeft="@drawable/ic_search"
+                android:hint="Tìm tỉnh thành"
+                android:paddingLeft="5dp"
+                />
+
+        </LinearLayout>
+        <ListView
+            android:id="@+id/lstview_place_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:choiceMode="singleChoice"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
